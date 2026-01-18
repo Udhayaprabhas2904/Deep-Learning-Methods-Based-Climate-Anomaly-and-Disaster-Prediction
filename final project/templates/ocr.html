@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Upload</title>
+</head>
+<body>
+    <h2>Upload Screenshot for OCR</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload & Detect</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    {% if output_image %}
+        <h3>Detected Text Image:</h3>
+        <img src="{{ output_image }}" style="max-width:600px;">
+    {% endif %}
+   {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if location %}
+        <h3>🌍 Location Found</h3>
+        <p><b>Latitude:</b> {{ location[0] }}</p>
+        <p><b>Longitude:</b> {{ location[1] }}</p>
+        <iframe src="https://www.google.com/maps?q={{ location[0] }},{{ location[1] }}&output=embed"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <hr>
+    {% endif %}
+
+
+    
+</body>
+</html>
