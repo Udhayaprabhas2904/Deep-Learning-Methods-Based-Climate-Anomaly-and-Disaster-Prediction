@@ -1,0 +1,2 @@
+# Deep-Learning-Methods-Based-Climate-Anomaly-and-Disaster-Prediction
+Detect long-term climate anomalies using historical data Predict natural disasters such as floods, droughts, cyclones,  storms, heatwaves, landslides, volcanic eruptions, wildfires, tsunamis.  Provide real-time alerts and GIS-based(weather API) visualizations Offer a Tourist Safety &amp; Trip Planner using climate risk assessment
